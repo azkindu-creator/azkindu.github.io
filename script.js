@@ -1,5 +1,8 @@
 const form = document.getElementById("valentineForm");
 
+const interval = window.innerWidth < 500 ? 400 : 200;
+setInterval(createHeart, interval);
+
 form.addEventListener("submit", function(e) {
   e.preventDefault(); // prevent default form submission
 
@@ -18,3 +21,4 @@ form.addEventListener("submit", function(e) {
     alert("Wrong answer boo 💕");
   }
 });
+
