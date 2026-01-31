@@ -1,17 +1,18 @@
 const form = document.getElementById("valentineForm");
+const noBtn = document.getElementById("noBtn");
 
-const bubbles = document.querySelectorAll(".bubble-bg span");
-
-bubbles.forEach(bubble => {
-  bubble.style.left = Math.random() * 100 + "vw";
-  bubble.style.animationDelay = Math.random() * 10 + "s";
-  bubble.style.animationDuration = 8 + Math.random() * 6 + "s";
+// Make No button dodge the mouse
+noBtn.addEventListener("mouseover", () => {
+  const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+  const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+  noBtn.style.position = "absolute";
+  noBtn.style.left = `${x}px`;
+  noBtn.style.top = `${y}px`;
 });
 
-
+// Handle form submit
 form.addEventListener("submit", function(e) {
-  e.preventDefault(); // prevent default form submission
-
+  e.preventDefault();
   const answer = document.querySelector('input[name="answer"]:checked');
 
   if (!answer) {
@@ -20,13 +21,8 @@ form.addEventListener("submit", function(e) {
   }
 
   if (answer.value === "Yes") {
-    // Go to index2.html
     window.location.href = "index2.html";
   } else {
-    // No was chosen — stay on page
-    alert("Wrong answer boo 💕");
+    alert("Aww, maybe next time! 💕");
   }
 });
-
-
-
