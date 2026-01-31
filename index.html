@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <!-- FIXED -->
-    <title>INVITATION FORM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAN YOU BE MY VALENTINE?</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="font-size: 5ex;">
+<body>
 
-<!-- Bubble background -->
-<div class="bubble-bg">
+  <!-- Heart bubble background -->
+  <div class="bubble-bg">
     <span>💗</span>
     <span>💖</span>
     <span>💘</span>
@@ -19,29 +19,24 @@
     <span>💓</span>
     <span>💗</span>
     <span>💖</span>
-    <span>💖</span>
-    <span>💗</span>
-    <span>💓</span>
-    <span>💕</span>
-    <span>💞</span>
-    <span>💘</span>
-    <span>💖</span>
-    <span>💗</span>
-</div>
+  </div>
 
-<section style="text-align: center; ; position: relative; z-index: 1;">
-    <div>
-        <h1>CAN YOU BE MY VALENTINE?</h1>
+  <section class="card">
+    <h1>CAN YOU BE MY VALENTINE?</h1>
 
-<a href="index2.html><button type="button" id="yes">YES</button></a>
-<button type="button" id="no">NO</button>
+    <form id="valentineForm">
+      <label>
+        <input type="radio" name="answer" value="Yes"> Yes
+      </label>
 
+      <label id="noBtn">
+        <input type="radio" name="answer" value="No"> No
+      </label>
 
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
-    </div>
-</section>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
