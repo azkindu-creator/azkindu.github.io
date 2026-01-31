@@ -1,5 +1,12 @@
 const form = document.getElementById("valentineForm");
 
+const bubbles = document.querySelectorAll(".bubble-bg span");
+
+bubbles.forEach(bubble => {
+  bubble.style.left = Math.random() * 100 + "vw";
+  bubble.style.animationDelay = Math.random() * 10 + "s";
+  bubble.style.animationDuration = 8 + Math.random() * 6 + "s";
+});
 
 
 form.addEventListener("submit", function(e) {
@@ -20,5 +27,6 @@ form.addEventListener("submit", function(e) {
     alert("Wrong answer boo 💕");
   }
 });
+
 
 
