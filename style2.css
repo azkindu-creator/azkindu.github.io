@@ -52,5 +52,15 @@ body {
     opacity: 0;
   }
 }
+.yay-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.yay-link:hover {
+  text-decoration: underline;
+}
+
+
 
 
